@@ -86,7 +86,7 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate{
             eiTextfield.text = String(value7)
             
             // Notify new value to central devices
-            peripheralManager?.updateValue(Data(bytes: &package, count: MemoryLayout.size(ofValue:package)), for: characteristic, onSubscribedCentrals: centrals)
+            peripheralManager?.updateValue(package, for: characteristic, onSubscribedCentrals: centrals)
         });
     }
     
